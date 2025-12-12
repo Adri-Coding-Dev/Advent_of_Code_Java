@@ -173,7 +173,7 @@ Enter year: 2024
 
 | Día | Título | Parte 1 | Parte 2 | Dificultad | Tiempo |
 |-----|--------|:-------:|:-------:|:----------:|:------:|
-| 01 | [Día 1](src/year_2025/Day_01_2025.java) | 🔄 | 🔄 | ⭐ | - |
+| 01 | [Día 1](src/year_2025/Day_01_2025.java) | ✅ | ✅ | ⭐ | - |
 | ... | ... | ... | ... | ... | ... |
 
 ### Advent of Code 2024 (Proximamente)
@@ -245,7 +245,7 @@ Enter year: 2024
 ![Última actualización](https://img.shields.io/badge/Última_actualización-Diciembre_2025-lightgrey)
 
 **Progreso total:** 
-- 🔴 **2025:** 1/25 días (0%)
+- 🔴 **2025:** 1/25 días (4%)
 - 🔴 **2024:** 0/25 días (0%)
 - 🟡 **Total:** 1/50 días (2%)
 
