@@ -36,8 +36,8 @@ AdventOfCode/
 │   │   └── Utils.java                 # Métodos helper (parsing, matemáticas, etc.)
 │   │
 │   ├── years/                         # Calendarios específicos por año
+|       ├── Year_2025.java             # Calendario 2025
 │   │   ├── Year_2024.java             # Calendario 2024
-│   │   ├── Year_2025.java             # Calendario 2025
 │   │   └── ...                        # Otros años
 │   │
 │   ├── year_2025/                     # Soluciones 2025
@@ -174,18 +174,10 @@ Enter year: 2024
 | Día | Título | Parte 1 | Parte 2 | Dificultad | Tiempo |
 |-----|--------|:-------:|:-------:|:----------:|:------:|
 | 01 | [Día 1](src/year_2025/Day_01_2025.java) | 🔄 | 🔄 | ⭐ | - |
-| 02 | [Día 2](src/year_2025/Day_02_2025.java) | 🔄 | 🔄 | ⭐⭐ | - |
-| 03 | [Día 3](src/year_2025/Day_03_2025.java) | 🔄 | 🔄 | ⭐⭐ | - |
 | ... | ... | ... | ... | ... | ... |
 
-### Advent of Code 2024
+### Advent of Code 2024 (Proximamente)
 
-| Día | Título | Parte 1 | Parte 2 | Dificultad | Tiempo |
-|-----|--------|:-------:|:-------:|:----------:|:------:|
-| 01 | [Día 1](src/year_2024/Day_01_2024.java) | ✅ | ✅ | ⭐ | 5ms |
-| 02 | [Día 2](src/year_2024/Day_02_2024.java) | 🔄 | 🔄 | ⭐⭐ | - |
-| 03 | [Día 3](src/year_2024/Day_03_2024.java) | 🔄 | 🔄 | ⭐⭐⭐ | - |
-| ... | ... | ... | ... | ... | ... |
 
 **Leyenda:** ✅ Completado | 🔄 En progreso | ⏳ Pendiente
 
@@ -253,21 +245,15 @@ Enter year: 2024
 ![Última actualización](https://img.shields.io/badge/Última_actualización-Diciembre_2025-lightgrey)
 
 **Progreso total:** 
-- 🔴 **2024:** 1/25 días (4%)
-- 🔴 **2025:** 0/25 días (0%)
+- 🔴 **2025:** 1/25 días (0%)
+- 🔴 **2024:** 0/25 días (0%)
 - 🟡 **Total:** 1/50 días (2%)
 
 ## 🎯 Cómo Contribuir o Extender
 
 ### Agregar un Nuevo Año
 
-1. **Crear estructura del año:**
-```java
-// Ejecutar en CreateProjectStructure.java
-createYearStructure(2026);
-```
-
-2. **Implementar calendario:**
+1. **Implementar calendario:**
 ```java
 // En src/years/Year_2026.java
 package years;
@@ -281,7 +267,7 @@ public class Year_2026 extends Calendar {
 }
 ```
 
-3. **Actualizar Main.java:**
+2. **Actualizar Main.java:**
 ```java
 private static Calendar createCalendar(int year) {
     switch (year) {
