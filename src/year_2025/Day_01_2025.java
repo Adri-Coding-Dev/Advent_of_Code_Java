@@ -8,6 +8,7 @@ import java.util.Scanner;
 import utils.Utils;
 
 public class Day_01_2025 extends Day{
+	private String inputPath="src/inputs_2025/Input_Day01.txt";
 	public Day_01_2025() {
 		super(2025,1);
 	}
@@ -18,7 +19,7 @@ public class Day_01_2025 extends Day{
 
         try {
             //Lee el archivo con las instrucciones
-            Scanner s = new Scanner(new File("src/inputs_2025/Input_Day01.txt"));
+            Scanner s = new Scanner(new File(inputPath));
             
             //Procesa todas las líneas del archivo
             while (s.hasNextLine()) {
@@ -74,7 +75,7 @@ public class Day_01_2025 extends Day{
         long contador = 0;  //Veces que llega a 0 (Usamos long porque el número puede ser grande)
 
         try {
-            Scanner s = new Scanner(new File("src/inputs_2025/Input_Day01.txt"));
+            Scanner s = new Scanner(new File(inputPath));
             
             //Procesa todas las líneas del archivo
             while (s.hasNextLine()) {

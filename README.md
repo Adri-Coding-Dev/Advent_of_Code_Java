@@ -43,7 +43,10 @@ AdventOfCode/
 │   ├── year_2025/                     # Soluciones 2025
 │   │   ├── Day_01_2025.java           # Día 1 de 2025
 │   │   ├── Day_02_2025.java           # Día 2 de 2025
-│   │   └── ...                        # Días 3-25
+│   │   ├── Day_03_2025.java           # Día 3 de 2025
+│   │   ├── Day_04_2025.java           # Día 4 de 2025
+│   │   ├── Day_05_2025.java           # Día 5 de 2025
+│   │   └── ...                        # Días 6-25
 │   │
 │   ├── year_2024/                     # Soluciones 2024
 │   │   ├── Day_01_2024.java           # Día 1 de 2024
@@ -53,7 +56,10 @@ AdventOfCode/
 │   ├── inputs_2025/                   # Archivos de entrada 2025
 │   │   ├── Input_Day01.txt            # Input día 1
 │   │   ├── Input_Day02.txt            # Input día 2
-│   │   └── ...                        # Inputs días 3-25
+│   │   ├── Input_Day03.txt            # Input día 3
+│   │   ├── Input_Day04.txt            # Input día 4
+│   │   ├── Input_Day05.txt            # Input día 5
+│   │   └── ...                        # Inputs días 6-25
 │   │
 │   ├── inputs_2024/                   # Archivos de entrada 2024
 │   │   ├── Input_Day01.txt
@@ -61,9 +67,12 @@ AdventOfCode/
 │   │   └── ...
 │   │
 │   └── instructions_2025/             # Instrucciones 2025
-│   │   ├── Instructions_Day01.txt     # Instrucciones día 1
-│   │   ├── Instructions_Day02.txt     # Instrucciones día 2
-│       └── ...
+│       ├── Instructions_Day01.txt     # Instrucciones día 1
+│       ├── Instructions_Day02.txt     # Instrucciones día 2
+│       ├── Instructions_Day03.txt     # Instrucciones día 3
+│       ├── Instructions_Day04.txt     # Instrucciones día 4
+│       ├── Instructions_Day05.txt     # Instrucciones día 5
+│       └── ...                        # Instrucciones días 6-25
 │
 ├── README.md                          # Este archivo
 └── LICENSE                            # Licencia MIT
@@ -173,7 +182,12 @@ Enter year: 2024
 
 | Día | Título | Parte 1 | Parte 2 | Dificultad | Tiempo |
 |-----|--------|:-------:|:-------:|:----------:|:------:|
-| 01 | [Día 1](src/year_2025/Day_01_2025.java) | ✅ | ✅ | ⭐ | - |
+| 01 | [Día 1](src/year_2025/Day_01_2025.java) | ✅ | ✅ | ⭐ | 48ms |
+| 02 | [Día 2](src/year_2025/Day_02_2025.java) | ✅ | ✅ | ⭐ | 28ms |
+| 03 | [Día 3](src/year_2025/Day_03_2025.java) | ✅ | ✅ | ⭐⭐ | 7ms |
+| 04 | [Día 4](src/year_2025/Day_04_2025.java) | ✅ | ✅ | ⭐⭐⭐ | 26ms |
+| 05 | [Día 5](src/year_2025/Day_05_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐ | 7ms |
+| 06 | [Día 6](src/year_2025/Day_06_2025.java) | 🔄 | 🔄 | - | - |
 | ... | ... | ... | ... | ... | ... |
 
 ### Advent of Code 2024 (Proximamente)
@@ -245,9 +259,9 @@ Enter year: 2024
 ![Última actualización](https://img.shields.io/badge/Última_actualización-Diciembre_2025-lightgrey)
 
 **Progreso total:** 
-- 🔴 **2025:** 1/25 días (4%)
+- 🔴 **2025:** 5/25 días (20%)
 - 🔴 **2024:** 0/25 días (0%)
-- 🟡 **Total:** 1/50 días (2%)
+- 🟡 **Total:** 5/50 días (10%)
 
 ## 🎯 Cómo Contribuir o Extender
 
