@@ -17,7 +17,94 @@ public class Utils {
         return ((puntero - cantidad) % 100 + 100) % 100;
     }
     
+    public static int contadorNumerosDia6(Object[] lista) {
+    	int contador = 0;
+    	boolean numeroEmpezado = false;
+    	
+    	for(int i = 0; i < lista.length - 1; i++) {
+    		for(int j=0; j < lista[i].toString().length(); j++) {
+    			
+    			if(lista[i].toString().charAt(j) > 47 && lista[i].toString().charAt(j) < 58) {
+    				numeroEmpezado = true;
+    			} else {
+    				if (numeroEmpezado) {
+    					contador ++;
+    					numeroEmpezado = false;
+    				}
+    			}
+    		}
+    	}
+    	return contador;
+    }
     
+    public static void separadorNumerosDia6(Object[] lista, int[][] listaSeparada, char[] listaOperadores) {
+    	int numero = 0;
+    	int contadorOperadores = 0;
+    	int contador = 0;
+    	boolean numeroEmpezado = false;
+    	
+    	for(int i = 0; i < lista.length; i++) {
+    		for(int j=0; j < lista[i].toString().length(); j++) {
+    			
+    			if(lista[i].toString().charAt(j) > 47 && lista[i].toString().charAt(j) < 58) {
+    				numeroEmpezado = true;
+    				numero *= 10;
+    				numero += lista[i].toString().charAt(j) - 48;
+    			}
+    			else if(lista[i].toString().charAt(j) == '+' || lista[i].toString().charAt(j) == '*') {
+    				listaOperadores[contadorOperadores] = lista[i].toString().charAt(j);
+    				contadorOperadores ++;
+    			}
+    			else {
+    				if (numeroEmpezado) {
+    					listaSeparada[i][contador] = numero;
+						contador ++;
+						numeroEmpezado = false;
+    				}
+    				numero = 0;
+    			}
+    		}
+    		if (numeroEmpezado) {
+				listaSeparada[i][contador] = numero;
+				contador ++;
+				numeroEmpezado = false;
+			}
+    		numero = 0;
+    		contador = 0;
+    		contadorOperadores = 0;
+    	}
+    }
+    
+    public static void separadorNumerosDia6Parte2(Object[] lista, int[][] listaSeparada, char[] listaOperadores) {
+    	int numero = 0;
+    	int contadorOperadores = 0;
+    	int contador = 0;
+    	boolean numeroEmpezado = false;
+    	
+    	
+    	for(int j=0; j < lista[0].toString().length(); j++) {
+    		for(int i = 0; i < lista.length - 1; i++) {
+    			if(lista[i].toString().charAt(j) > 47 && lista[i].toString().charAt(j) < 58) {
+    				numeroEmpezado = true;
+    				numero *= 10;
+    				numero += lista[i].toString().charAt(j) - 48;
+    			}
+    			numero = 0;
+				if (numeroEmpezado) {
+					listaSeparada[i][contador] = numero;
+					contador ++;
+					numeroEmpezado = false;
+				}
+			if(lista[i].toString().charAt(j) == '+' || lista[i].toString().charAt(j) == '*') {
+				listaOperadores[contadorOperadores] = lista[i].toString().charAt(j);
+				contadorOperadores ++;
+			}
+			}
+    		numero = 0;
+    		contador = 0;
+    		contadorOperadores = 0;
+    	}
+    }
     
     //Advent Of Code 2025 - Day02
     public static long sumInvalidInRange(long L, long R) {
