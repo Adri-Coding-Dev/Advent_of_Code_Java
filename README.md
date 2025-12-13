@@ -46,7 +46,8 @@ AdventOfCode/
 │   │   ├── Day_03_2025.java           # Día 3 de 2025
 │   │   ├── Day_04_2025.java           # Día 4 de 2025
 │   │   ├── Day_05_2025.java           # Día 5 de 2025
-│   │   └── ...                        # Días 6-25
+│   │   ├── Day_06_2025.java           # Día 6 de 2025
+│   │   └── ...                        # Días 7-25
 │   │
 │   ├── year_2024/                     # Soluciones 2024
 │   │   ├── Day_01_2024.java           # Día 1 de 2024
@@ -59,7 +60,8 @@ AdventOfCode/
 │   │   ├── Input_Day03.txt            # Input día 3
 │   │   ├── Input_Day04.txt            # Input día 4
 │   │   ├── Input_Day05.txt            # Input día 5
-│   │   └── ...                        # Inputs días 6-25
+│   │   ├── Input_Day06.txt            # Input día 6
+│   │   └── ...                        # Inputs días 7-25
 │   │
 │   ├── inputs_2024/                   # Archivos de entrada 2024
 │   │   ├── Input_Day01.txt
@@ -72,7 +74,8 @@ AdventOfCode/
 │       ├── Instructions_Day03.txt     # Instrucciones día 3
 │       ├── Instructions_Day04.txt     # Instrucciones día 4
 │       ├── Instructions_Day05.txt     # Instrucciones día 5
-│       └── ...                        # Instrucciones días 6-25
+│       ├── Instructions_Day06.txt     # Instrucciones día 6
+│       └── ...                        # Instrucciones días 7-25
 │
 ├── README.md                          # Este archivo
 └── LICENSE                            # Licencia MIT
@@ -187,7 +190,7 @@ Enter year: 2024
 | 03 | [Día 3](src/year_2025/Day_03_2025.java) | ✅ | ✅ | ⭐⭐ | 7ms |
 | 04 | [Día 4](src/year_2025/Day_04_2025.java) | ✅ | ✅ | ⭐⭐⭐ | 26ms |
 | 05 | [Día 5](src/year_2025/Day_05_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐ | 7ms |
-| 06 | [Día 6](src/year_2025/Day_06_2025.java) | 🔄 | 🔄 | - | - |
+| 06 | [Día 6](src/year_2025/Day_06_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐ | 393ms |
 | ... | ... | ... | ... | ... | ... |
 
 ### Advent of Code 2024 (Proximamente)

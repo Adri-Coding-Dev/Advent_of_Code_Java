@@ -2,7 +2,8 @@ package core;
 import java.util.HashMap;
 import java.util.Map;
 public abstract class Calendar {
-	
+	private int numeroDiasTotales=25;
+	private int numeroDiasCompletados=0;
 	protected final int year;
 	protected final Map<Integer,Day>days;
 	
@@ -28,6 +29,7 @@ public abstract class Calendar {
 			System.out.println("\n"+"=".repeat(60));
 			System.out.printf("🎄 Advent of Code %d - Day %02d 🎄 \n",year,dayNumber);
 			System.out.println("=".repeat(60));
+			numeroDiasCompletados++;
 			day.run();
 		}else {
 			System.out.printf("Day %d not implemented for the year %d\n",dayNumber,year);
@@ -45,7 +47,7 @@ public abstract class Calendar {
 		});
 		
 		System.out.println("=".repeat(60));
-		System.out.printf("ADVENT OF CODE %d COMPLETED \n",year);
+		System.out.printf("ADVENT OF CODE %d COMPLETED %d/%d\n",year,numeroDiasCompletados,numeroDiasTotales);
 		System.out.println("=".repeat(60));
 	}
 	protected void addDay(int number,Day day) {
