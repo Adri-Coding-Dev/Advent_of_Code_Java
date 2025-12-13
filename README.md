@@ -159,24 +159,17 @@ java -cp bin core.Main
 
 ### Ejemplos de Uso
 
-1. **Ejecutar día específico:**
+1. **Ejecutar año completo:**
 ```
 Select option: 1
-Enter year: 2024
-Enter day: 3
+Enter year: 2025
 ```
 
-2. **Ver instrucciones:**
+2. **Ejecutar día específico:**
 ```
 Select option: 2
-Enter year: 2025
-Enter day: 1
-```
-
-3. **Ejecutar año completo:**
-```
-Select option: 3
 Enter year: 2024
+Enter day number: 3
 ```
 
 ## 📊 Progreso de Soluciones
