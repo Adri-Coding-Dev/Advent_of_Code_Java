@@ -135,8 +135,7 @@ public class Day_08_2025 extends Day {
             y[i] = Integer.parseInt(parts[1]);
             z[i] = Integer.parseInt(parts[2]);
         }
-
-        // Generar todos los pares posibles de cajas con sus distancias al cuadrado
+        
         // Generate all possible pairs of boxes with their squared distances
         List<Pair> pairs = new ArrayList<>();
         for (int i = 0; i < N; i++) {
@@ -149,11 +148,9 @@ public class Day_08_2025 extends Day {
             }
         }
 
-        // Ordenar los pares por distancia (más cercanos primero)
         // Sort pairs by distance (closest first)
         Collections.sort(pairs);
-
-        // Inicializar estructura Union-Find: cada caja es su propio circuito
+        
         // Initialize Union-Find structure: each box is its own circuit
         int[] parent = new int[N];
         int[] size = new int[N];
@@ -162,23 +159,17 @@ public class Day_08_2025 extends Day {
             size[i] = 1;
         }
 
-        // Inicializar contador de componentes y variables para la última conexión
         // Initialize component counter and variables for the last connection
-        int components = N; // Al principio, cada caja es un circuito independiente
-                            // Initially, each box is an independent circuit
-        int lastI = -1, lastJ = -1; // Índices de la última conexión exitosa
-                                    // Indices of the last successful connection
+        int components = N;  // Initially, each box is an independent circuit
+        int lastI = -1, lastJ = -1;  // Indices of the last successful connection
 
-        // Procesar pares en orden de distancia creciente
         // Process pairs in increasing distance order
         for (Pair p : pairs) {
             int rootI = Utils_Day08.find(p.i, parent);
             int rootJ = Utils_Day08.find(p.j, parent);
-
-            // Solo conectar si están en circuitos diferentes
+            
             // Only connect if they are in different circuits
             if (rootI != rootJ) {
-                // Unir los dos circuitos (unión por tamaño para eficiencia)
                 // Merge the two circuits (union by size for efficiency)
                 if (size[rootI] < size[rootJ]) {
                     parent[rootI] = rootJ;
@@ -188,37 +179,29 @@ public class Day_08_2025 extends Day {
                     size[rootI] += size[rootJ];
                 }
 
-                // Guardar los índices de esta conexión exitosa
                 // Save the indices of this successful connection
                 lastI = p.i;
                 lastJ = p.j;
-                components--; // Reducir el número de circuitos independientes
-                              // Reduce the number of independent circuits
+                components--; // Reduce the number of independent circuits
 
-                // Verificar si ya tenemos un solo circuito
                 // Check if we already have a single circuit
                 if (components == 1) {
-                    // ¡Todas las cajas están conectadas! Esta fue la última conexión necesaria
-                    // All boxes are connected! This was the last needed connection
+                    // All boxes are connected. This was the last needed connection
                     break;
                 }
             }
         }
-
-        // Multiplicar las coordenadas X de la última conexión que unificó todos los
-        // circuitos
+        
         // Multiply the X coordinates of the last connection that unified all circuits
-        // Usamos long para evitar desbordamiento de enteros
         // We use long to avoid integer overflow
         long result = (long) x[lastI] * (long) x[lastJ];
         return String.valueOf(result);
     }
 
-    // Clase auxiliar para representar pares de cajas con su distancia
     // Helper class to represent pairs of boxes with their distance
     static class Pair implements Comparable<Pair> {
-        int i, j; // Índices de las cajas / Indices of the boxes
-        long distSQ; // Distancia al cuadrado entre las cajas / Squared distance between boxes
+        int i, j; // Index of the boxes
+        long distSQ; // Squared distance between boxes
 
         Pair(int i, int j, long distSQ) {
             this.i = i;
@@ -226,7 +209,6 @@ public class Day_08_2025 extends Day {
             this.distSQ = distSQ;
         }
 
-        // Comparar por distancia para ordenar
         // Compare by distance for sorting
         @Override
         public int compareTo(Pair other) {
