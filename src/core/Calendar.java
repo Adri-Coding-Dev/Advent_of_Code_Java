@@ -1,59 +1,66 @@
 package core;
+
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+
 public abstract class Calendar {
-	private int numeroDiasTotales=25;
-	private int numeroDiasCompletados=0;
+	private int numeroDiasTotales = 25;
+	private int numeroDiasCompletados = 0;
 	protected final int year;
-	protected final Map<Integer,Day>days;
-	
+	protected final Map<Integer, Day> days;
+
 	/**
 	 * 
 	 * @param year
 	 */
 	public Calendar(int year) {
-		this.year=year;
-		this.days=new HashMap<>();
+		this.year = year;
+		this.days = new HashMap<>();
 		inicializeDays();
 	}
-	
+
 	/**
 	 * 
 	 */
 	protected abstract void inicializeDays();
-	
-	
-	public void runDay(int dayNumber) {
-		if(days.containsKey(dayNumber)) {
-			Day day=days.get(dayNumber);
-			System.out.println("\n"+"=".repeat(60));
-			System.out.printf("🎄 Advent of Code %d - Day %02d 🎄 \n",year,dayNumber);
+
+	public void runDay(int dayNumber) throws IOException {
+		if (days.containsKey(dayNumber)) {
+			Day day = days.get(dayNumber);
+			System.out.println("\n" + "=".repeat(60));
+			System.out.printf("🎄 Advent of Code %d - Day %02d 🎄 \n", year, dayNumber);
 			System.out.println("=".repeat(60));
 			numeroDiasCompletados++;
 			day.run();
-		}else {
-			System.out.printf("Day %d not implemented for the year %d\n",dayNumber,year);
+		} else {
+			System.out.printf("Day %d not implemented for the year %d\n", dayNumber, year);
 		}
 	}
-	
-	
+
 	public void runYear() {
-		System.out.println("\n"+"=".repeat(60));
-		System.out.printf("Starting Advent of Code %d \n",year);
+		System.out.println("\n" + "=".repeat(60));
+		System.out.printf("Starting Advent of Code %d \n", year);
 		System.out.println("=".repeat(60));
-		
-		days.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(entry ->{
-			runDay(entry.getKey());
+
+		days.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEach(entry -> {
+			try {
+				runDay(entry.getKey());
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		});
-		
+
 		System.out.println("=".repeat(60));
-		System.out.printf("ADVENT OF CODE %d COMPLETED %d/%d\n",year,numeroDiasCompletados,numeroDiasTotales);
+		System.out.printf("ADVENT OF CODE %d COMPLETED %d/%d\n", year, numeroDiasCompletados, numeroDiasTotales);
 		System.out.println("=".repeat(60));
 	}
-	protected void addDay(int number,Day day) {
-		days.put(number,day);
+
+	protected void addDay(int number, Day day) {
+		days.put(number, day);
 	}
-	
+
 	public int getYear() {
 		return year;
 	}

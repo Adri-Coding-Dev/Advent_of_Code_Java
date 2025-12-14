@@ -32,36 +32,30 @@ AdventOfCode/
 │   │   ├── Day.java                   # Clase abstracta para días
 │   │   └── Main.java                  # Punto de entrada principal
 │   │
-│   ├── utils/                         # Utilidades comunes
-│   │   └── Utils.java                 # Métodos helper (parsing, matemáticas, etc.)
+│   ├── utils_2025/                    # Utilidades de 2025
+│   │   ├── Utils.java                 # Utilidades generales para todos los días
+│   │   ├── Utils_Day01.java           # Utilidades generales para todos los días
+│   │   └── ...                        # Resto de Utilidades
 │   │
 │   ├── years/                         # Calendarios específicos por año
-|       ├── Year_2025.java             # Calendario 2025
+|   |   ├── Year_2025.java             # Calendario 2025
 │   │   ├── Year_2024.java             # Calendario 2024
 │   │   └── ...                        # Otros años
 │   │
 │   ├── year_2025/                     # Soluciones 2025
 │   │   ├── Day_01_2025.java           # Día 1 de 2025
 │   │   ├── Day_02_2025.java           # Día 2 de 2025
-│   │   ├── Day_03_2025.java           # Día 3 de 2025
-│   │   ├── Day_04_2025.java           # Día 4 de 2025
-│   │   ├── Day_05_2025.java           # Día 5 de 2025
-│   │   ├── Day_06_2025.java           # Día 6 de 2025
-│   │   └── ...                        # Días 7-25
+│   │   └── ...                        # Resto de Días
 │   │
 │   ├── year_2024/                     # Soluciones 2024
 │   │   ├── Day_01_2024.java           # Día 1 de 2024
 │   │   ├── Day_02_2024.java           # Día 2 de 2024
-│   │   └── ...                        # Días 3-25
+│   │   └── ...                        # Resto de Días
 │   │
 │   ├── inputs_2025/                   # Archivos de entrada 2025
 │   │   ├── Input_Day01.txt            # Input día 1
 │   │   ├── Input_Day02.txt            # Input día 2
-│   │   ├── Input_Day03.txt            # Input día 3
-│   │   ├── Input_Day04.txt            # Input día 4
-│   │   ├── Input_Day05.txt            # Input día 5
-│   │   ├── Input_Day06.txt            # Input día 6
-│   │   └── ...                        # Inputs días 7-25
+│   │   └── ...                        # Resto de Inputs
 │   │
 │   ├── inputs_2024/                   # Archivos de entrada 2024
 │   │   ├── Input_Day01.txt
@@ -71,11 +65,7 @@ AdventOfCode/
 │   └── instructions_2025/             # Instrucciones 2025
 │       ├── Instructions_Day01.txt     # Instrucciones día 1
 │       ├── Instructions_Day02.txt     # Instrucciones día 2
-│       ├── Instructions_Day03.txt     # Instrucciones día 3
-│       ├── Instructions_Day04.txt     # Instrucciones día 4
-│       ├── Instructions_Day05.txt     # Instrucciones día 5
-│       ├── Instructions_Day06.txt     # Instrucciones día 6
-│       └── ...                        # Instrucciones días 7-25
+│       └── ...                        # Resto de Instrucciones
 │
 ├── README.md                          # Este archivo
 └── LICENSE                            # Licencia MIT
@@ -119,7 +109,7 @@ AdventOfCode/
 
 1. **Clonar el repositorio:**
 ```bash
-git clone https://github.com/tu-usuario/adventofcode-multiyear.git
+git clone https://github.com/Adri-Coding-Dev/Advent_of_Code_Java?tab=readme-ov-file.git
 ```
 
 2. **Importar en Eclipse:**
@@ -178,12 +168,13 @@ Enter day number: 3
 
 | Día | Título | Parte 1 | Parte 2 | Dificultad | Tiempo |
 |-----|--------|:-------:|:-------:|:----------:|:------:|
-| 01 | [Día 1](src/year_2025/Day_01_2025.java) | ✅ | ✅ | ⭐ | 48ms |
+| 01 | [Día 1](src/year_2025/Day_01_2025.java) | ✅ | ✅ | ⭐ | 30ms |
 | 02 | [Día 2](src/year_2025/Day_02_2025.java) | ✅ | ✅ | ⭐ | 28ms |
 | 03 | [Día 3](src/year_2025/Day_03_2025.java) | ✅ | ✅ | ⭐⭐ | 7ms |
 | 04 | [Día 4](src/year_2025/Day_04_2025.java) | ✅ | ✅ | ⭐⭐⭐ | 26ms |
 | 05 | [Día 5](src/year_2025/Day_05_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐ | 7ms |
-| 06 | [Día 6](src/year_2025/Day_06_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐ | 393ms |
+| 06 | [Día 6](src/year_2025/Day_06_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐ | 50ms |
+| 06 | [Día 7](src/year_2025/Day_07_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐ | 28ms |
 | ... | ... | ... | ... | ... | ... |
 
 ### Advent of Code 2024 (Proximamente)
@@ -255,9 +246,8 @@ Enter day number: 3
 ![Última actualización](https://img.shields.io/badge/Última_actualización-Diciembre_2025-lightgrey)
 
 **Progreso total:** 
-- 🔴 **2025:** 5/25 días (20%)
-- 🔴 **2024:** 0/25 días (0%)
-- 🟡 **Total:** 5/50 días (10%)
+- 🔴 **2025:** 7/24 días (29,17%)
+- 🟡 **Total:** 7/24 días (29,17%)
 
 ## 🎯 Cómo Contribuir o Extender
 
@@ -277,7 +267,7 @@ public class Year_2026 extends Calendar {
 }
 ```
 
-2. **Actualizar Main.java:**
+2. **Actualizar Main.java para añadir el año generado:**
 ```java
 private static Calendar createCalendar(int year) {
     switch (year) {
@@ -289,7 +279,7 @@ private static Calendar createCalendar(int year) {
 
 ### Agregar una Nueva Utilidad
 
-1. **Añadir método en Utils.java:**
+1. **Añadir método en Utils.java (sin son metodos generales):**
 ```java
 public static int[] findPattern(String text, String pattern) {
     // Implementación

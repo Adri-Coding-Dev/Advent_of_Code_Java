@@ -1,36 +1,66 @@
 package year_2025;
-import java.io.IOException;
-import utils.Utils;
+
 import core.Day;
+import utils_2025.Utils;
+import utils_2025.Utils_Day05;
 
-public class Day_05_2025 extends Day{
-	private String inputPath="src/inputs_2025/Input_Day05.txt";
+import java.io.IOException;
+import java.util.List;
+
+public class Day_05_2025 extends Day {
+	private int year = 2025;
+	private int day = 5;
+
 	public Day_05_2025() {
-		super(2025,5);
+		super(2025, 5);
 	}
 
 	@Override
-	public String solvePart1() {
-		try {
-            int freshCount = Utils.countFreshIngredients(inputPath);
-            System.out.println("Número de ingredientes frescos: " + freshCount);
-            return String.valueOf(freshCount);
-        } catch (IOException e) {
-            System.err.println("Error al leer el archivo: " + e.getMessage());
-        }
-		return null;
+	public String solvePart1() throws IOException {
+		List<String> lines = Utils.readInput(year, day);
+
+		int freshCount = 0;
+		for (String line : lines) {
+			if (line.isBlank())
+				continue;
+
+			String[] parts = line.split(":");
+			if (parts.length != 2)
+				continue;
+
+			String id = parts[0];
+			String datesStr = parts[1];
+
+			if (Utils_Day05.isFreshIngredient(id, datesStr)) {
+				freshCount++;
+			}
+		}
+
+		return String.valueOf(freshCount);
 	}
 
 	@Override
-	public String solvePart2() {
-		try {
-            long totalFreshIds = Utils.countAllFreshIds(inputPath);
-            System.out.println("Total de IDs frescos: " + totalFreshIds);
-            return String.valueOf(totalFreshIds);
-        } catch (IOException e) {
-            System.err.println("Error al leer el archivo: " + e.getMessage());
-        }
-		return null;
+	public String solvePart2() throws IOException {
+		List<String> lines = Utils.readInput(year, day);
+		long totalFreshIds = 0;
+
+		for (String line : lines) {
+			if (line.isBlank())
+				continue;
+
+			String[] parts = line.split(":");
+			if (parts.length != 2)
+				continue;
+
+			String id = parts[0];
+			String datesStr = parts[1];
+
+			if (Utils_Day05.isFreshIngredient(id, datesStr)) {
+				totalFreshIds += Long.parseLong(id);
+			}
+		}
+
+		return String.valueOf(totalFreshIds);
 	}
 
 }
