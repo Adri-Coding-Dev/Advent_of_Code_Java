@@ -12,14 +12,25 @@ import java.util.regex.Pattern;
 import core.Day;
 import utils_2025.Utils;
 
+/**
+ * DAY 6 of 2025 AoC
+ */
 public class Day_06_2025 extends Day {
-    private int year = 2025;
-    private int day = 6;
+    // Atributes
+    private int year = 2025; // -> Year number
+    private int day = 6; // -> Day Number
 
+    /**
+     * Constructor of Day
+     */
     public Day_06_2025() {
         super(2025, 6);
     }
 
+    /**
+     * Method to solve the first Part of the problem
+     * Return IOException if the Utils.readInput can read de input
+     */
     @Override
     public String solvePart1() throws IOException {
         List<String> lines = Utils.readInput(year, day);
@@ -64,6 +75,10 @@ public class Day_06_2025 extends Day {
         return String.valueOf(suma);
     }
 
+    /**
+     * Method to solve the second Part of the problem
+     * Return IOException if the Utils.readInput can read de input
+     */
     @Override
     public String solvePart2() throws IOException {
         List<String> lines = Utils.readInput(year, day);

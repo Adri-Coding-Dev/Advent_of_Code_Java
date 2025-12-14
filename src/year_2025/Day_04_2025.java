@@ -7,14 +7,25 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * DAY 4 of 2025 AoC
+ */
 public class Day_04_2025 extends Day {
-    private int year = 2025;
-    private int day = 4;
+    // Atributes
+    private int year = 2025; // -> Year number
+    private int day = 4; // -> Day Number
 
+    /**
+     * Constructor of Day
+     */
     public Day_04_2025() {
         super(2025, 4);
     }
 
+    /**
+     * Method to solve the first Part of the problem
+     * Return IOException if the Utils.readInput can read de input
+     */
     @Override
     public String solvePart1() throws IOException {
         List<String> lines = Utils.readInput(year, day);
@@ -57,6 +68,10 @@ public class Day_04_2025 extends Day {
         return String.valueOf(accessibleCount);
     }
 
+    /**
+     * Method to solve the second Part of the problem
+     * Return IOException if the Utils.readInput can read de input
+     */
     @Override
     public String solvePart2() throws IOException {
         List<String> lines = Utils.readInput(year, day);

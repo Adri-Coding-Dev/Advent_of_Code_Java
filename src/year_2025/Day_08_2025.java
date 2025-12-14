@@ -9,14 +9,25 @@ import utils_2025.Utils;
 import utils_2025.Utils_Day08;
 import core.Day;
 
+/**
+ * DAY 8 of 2025 AoC
+ */
 public class Day_08_2025 extends Day {
-    private final int year = 2025;
-    private final int day = 8;
+    // Atributes
+    private final int year = 2025; // -> Year number
+    private final int day = 8; // -> Day number
 
+    /**
+     * Constructor of Day
+     */
     public Day_08_2025() {
         super(2025, 8);
     }
 
+    /**
+     * Method to solve the first Part of the problem
+     * Return IOException if the Utils.readInput can read de input
+     */
     @Override
     public String solvePart1() throws IOException {
         List<String> lines = Utils.readInput(year, dayNumber);
@@ -25,7 +36,6 @@ public class Day_08_2025 extends Day {
         int[] y = new int[N];
         int[] z = new int[N];
 
-        // Parsear coordenadas de las cajas de conexión desde el input
         // Parse junction box coordinates from input
         for (int i = 0; i < N; i++) {
             String[] parts = lines.get(i).split(",");
@@ -34,10 +44,7 @@ public class Day_08_2025 extends Day {
             z[i] = Integer.parseInt(parts[2]);
         }
 
-        // Generar todos los pares posibles de cajas con sus distancias al cuadrado
         // Generate all possible pairs of boxes with their squared distances
-        // Usamos distancia al cuadrado para evitar cálculos de raíz cuadrada
-        // innecesarios
         // We use squared distance to avoid unnecessary square root calculations
         List<Pair> pairs = new ArrayList<>();
         for (int i = 0; i < N; i++) {
@@ -50,15 +57,11 @@ public class Day_08_2025 extends Day {
             }
         }
 
-        // Ordenar los pares por distancia (más cercanos primero)
         // Sort pairs by distance (closest first)
-        // Esto nos permite procesar las conexiones más cortas primero
         // This allows us to process the shortest connections first
         Collections.sort(pairs);
 
-        // Inicializar estructura Union-Find para gestionar circuitos
         // Initialize Union-Find structure to manage circuits
-        // Cada caja comienza como su propio circuito independiente
         // Each box starts as its own independent circuit
         int[] parent = new int[N];
         int[] size = new int[N];
@@ -67,18 +70,14 @@ public class Day_08_2025 extends Day {
             size[i] = 1;
         }
 
-        // Realizar conexiones: conectar los 1000 pares más cercanos que unan circuitos
-        // diferentes
         // Make connections: connect the 1000 closest pairs that join different circuits
         int connections = 0;
         for (Pair p : pairs) {
             int rootI = Utils_Day08.find(p.i, parent);
             int rootJ = Utils_Day08.find(p.j, parent);
 
-            // Solo conectar si las cajas están en circuitos diferentes
             // Only connect if the boxes are in different circuits
             if (rootI != rootJ) {
-                // Unir los circuitos usando unión por tamaño para mantener el árbol balanceado
                 // Merge circuits using union by size to keep the tree balanced
                 if (size[rootI] < size[rootJ]) {
                     parent[rootI] = rootJ;
@@ -87,10 +86,8 @@ public class Day_08_2025 extends Day {
                     parent[rootJ] = rootI;
                     size[rootI] += size[rootJ];
                 }
-                connections++; // Incrementar contador de conexiones exitosas
-                               // Increment successful connections counter
+                connections++; // Increment successful connections counter
 
-                // Detener después de 1000 conexiones exitosas
                 // Stop after 1000 successful connections
                 if (connections == 1000) {
                     break;
@@ -98,23 +95,18 @@ public class Day_08_2025 extends Day {
             }
         }
 
-        // Recolectar tamaños de todos los circuitos (solo las raíces del Union-Find)
         // Collect sizes of all circuits (only the Union-Find roots)
         List<Integer> circuitSizes = new ArrayList<>();
         for (int i = 0; i < N; i++) {
-            if (parent[i] == i) { // Una raíz representa un circuito completo
-                                  // A root represents a complete circuit
+            if (parent[i] == i) { // A root represents a complete circuit
                 circuitSizes.add(size[i]);
             }
         }
 
-        // Ordenar tamaños de circuitos de mayor a menor
         // Sort circuit sizes from largest to smallest
         circuitSizes.sort(Collections.reverseOrder());
 
-        // Calcular el producto de los tres circuitos más grandes
         // Calculate the product of the three largest circuits
-        // Inicializar en 1 porque multiplicaremos
         // Initialize to 1 because we will multiply
         long result = 1;
         for (int i = 0; i < Math.min(3, circuitSizes.size()); i++) {
@@ -124,6 +116,10 @@ public class Day_08_2025 extends Day {
         return String.valueOf(result);
     }
 
+    /**
+     * Method to solve the second Part of the problem
+     * Return IOException if the Utils.readInput can read de input
+     */
     @Override
     public String solvePart2() throws IOException {
         List<String> lines = Utils.readInput(year, dayNumber);
@@ -132,7 +128,6 @@ public class Day_08_2025 extends Day {
         int[] y = new int[N];
         int[] z = new int[N];
 
-        // Parsear coordenadas de las cajas de conexión
         // Parse junction box coordinates
         for (int i = 0; i < N; i++) {
             String[] parts = lines.get(i).split(",");

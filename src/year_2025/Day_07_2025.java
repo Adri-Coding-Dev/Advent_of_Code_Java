@@ -7,23 +7,34 @@ import core.Day;
 import utils_2025.Utils;
 import utils_2025.Utils_Day07;
 
+/**
+ * DAY 7 of 2025 AoC
+ */
 public class Day_07_2025 extends Day {
-    private final int year = 2025;
-    private final int day = 7;
-    private char[][] map;
-    private int width, height;
+    // Atributes
+    private final int year = 2025; // -> Year number
+    private final int day = 7; // -> Day Number
+    private char[][] map; // -> Matrix to carge the map
+    private int width, height; // -> Height and width of Map
 
+    /**
+     * Constructor of Day
+     */
     public Day_07_2025() {
         super(2025, 7);
     }
 
+    /**
+     * Method to solve the first Part of the problem
+     * Return IOException if the Utils.readInput can read de input
+     */
     @Override
     public String solvePart1() throws IOException {
         List<String> lines = Utils.readInput(year, dayNumber);
         height = lines.size();
         width = lines.get(0).length();
 
-        // Convertir el mapa a array 2D
+        // Convert the map in a 2D array
         map = new char[height][width];
         for (int y = 0; y < height; y++) {
             String line = lines.get(y);
@@ -32,7 +43,7 @@ public class Day_07_2025 extends Day {
             }
         }
 
-        // Encontrar la posición de inicio
+        // Find the start position
         int startX = -1, startY = -1;
         for (int y = 0; y < height; y++) {
             for (int x = 0; x < width; x++) {
@@ -46,7 +57,7 @@ public class Day_07_2025 extends Day {
                 break;
         }
 
-        // Simular los rayos
+        // Simulate the stormBreakers
         boolean[][] beam = new boolean[height][width];
         beam[startY][startX] = true;
         int splits = 0;
@@ -70,6 +81,10 @@ public class Day_07_2025 extends Day {
         return String.valueOf(splits);
     }
 
+    /**
+     * Method to solve the second Part of the problem
+     * Return IOException if the Utils.readInput can read de input
+     */
     @Override
     public String solvePart2() throws IOException {
         List<String> lines = Utils.readInput(year, dayNumber);
@@ -85,11 +100,11 @@ public class Day_07_2025 extends Day {
             }
         }
 
-        // Pasar el mapa y dimensiones a Utils_Day07
+        // Convert the map and dimensions for the Utils
         Utils_Day07.setMap(map);
         Utils_Day07.setDimensions(width, height);
 
-        // Encontrar la posición inicial
+        // Find the start position
         int[] startPos = new int[2];
         Utils_Day07.findStart(startPos);
 
@@ -97,10 +112,10 @@ public class Day_07_2025 extends Day {
             return "Start position not found";
         }
 
-        // Inicializar memoización
+        // Start memorization
         Utils_Day07.initializeMemo();
 
-        // Contar líneas temporales
+        // Conunt temporals lines
         BigInteger timelines = Utils_Day07.countTimelines(startPos[0], startPos[1]);
         return timelines.toString();
     }

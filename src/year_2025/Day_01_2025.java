@@ -7,14 +7,25 @@ import utils_2025.Utils_Day01;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * DAY 1 of 2025 AoC
+ */
 public class Day_01_2025 extends Day {
-    private int year = 2025;
-    private int day = 1;
+    // Atributes
+    private int year = 2025; // -> Number year
+    private int day = 1; // -> Day number
 
+    /**
+     * Constructor of Day (Parent)
+     */
     public Day_01_2025() {
         super(2025, 1);
     }
 
+    /**
+     * Method to solve the first Part of the problem
+     * Return IOException if the Utils.readInput can read de input
+     */
     @Override
     public String solvePart1() throws IOException {
         List<String> lines = Utils.readInput(year, day);
@@ -42,6 +53,10 @@ public class Day_01_2025 extends Day {
         return String.valueOf(contador);
     }
 
+    /**
+     * Method to solve the second Part of the problem
+     * Return IOException if the Utils.readInput can read de input
+     */
     @Override
     public String solvePart2() throws IOException {
         List<String> lines = Utils.readInput(year, day);
@@ -58,32 +73,32 @@ public class Day_01_2025 extends Day {
 
             int delta = (direccion == 'R') ? cantidad : -cantidad;
 
-            // Calcular las posiciones extremas del movimiento
+            // Calculate the extremes positions of movement
             long inicio = puntero;
             long finLineal = inicio + delta;
             long min = Math.min(inicio, finLineal);
             long max = Math.max(inicio, finLineal);
 
-            // Encontrar el primer múltiplo de 100 >= min
+            // Find the first multip of 100 >= min
             long primerMultiplo = (long) Math.ceil(min / 100.0) * 100;
-            // Encontrar el último múltiplo de 100 <= max
+            // Find the last multip of 100 <=max
             long ultimoMultiplo = (long) Math.floor(max / 100.0) * 100;
 
-            // Contar cuántos múltiplos de 100 hay en el intervalo [min, max]
+            // Count how many multip of 100 have in the intervale [min, max]
             long cuentaEsteMovimiento = 0;
             if (primerMultiplo <= ultimoMultiplo) {
                 cuentaEsteMovimiento = (ultimoMultiplo - primerMultiplo) / 100 + 1;
             }
 
-            // Restar el punto de inicio si es múltiplo de 100
+            // Minus 1 if the start point is multip of 100
             if (puntero % 100 == 0) {
                 cuentaEsteMovimiento--;
             }
 
-            // Sumar al contador total
+            // Sum total to counter
             contador += cuentaEsteMovimiento;
 
-            // Actualizar la posición final
+            // Update the final position
             puntero = (int) ((puntero + delta) % 100);
             if (puntero < 0) {
                 puntero += 100;

@@ -9,14 +9,25 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.TreeSet;
 
+/**
+ * DAY 2 of 2025 AoC
+ */
 public class Day_02_2025 extends Day {
-	private int year = 2025;
-	private int day = 2;
+	// Atributes
+	private int year = 2025; // -> Year number
+	private int day = 2; // -> Day number
 
+	/**
+	 * Constructor of Day 2
+	 */
 	public Day_02_2025() {
 		super(2025, 2);
 	}
 
+	/**
+	 * Method to solve the first Part of the problem
+	 * Return IOException if the Utils.readInput can read de input
+	 */
 	@Override
 	public String solvePart1() throws IOException {
 		List<String> lines = Utils.readInput(year, day);
@@ -39,6 +50,10 @@ public class Day_02_2025 extends Day {
 		return String.valueOf(totalSum);
 	}
 
+	/**
+	 * Method to solve the second Part of the problem
+	 * Return IOException if the Utils.readInput can read de input
+	 */
 	@Override
 	public String solvePart2() throws IOException {
 		List<String> lines = Utils.readInput(year, day);

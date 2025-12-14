@@ -9,13 +9,23 @@ import year_2025.Day_05_2025;
 import year_2025.Day_06_2025;
 import year_2025.Day_07_2025;
 import year_2025.Day_08_2025;
+import year_2025.Day_09_2025;
 
+/**
+ * Class Year (to add all days of this year)
+ */
 public class Year_2025 extends Calendar {
 
+	/**
+	 * Constructor
+	 */
 	public Year_2025() {
 		super(2025);
 	}
 
+	/**
+	 * Method to inicialize each Day
+	 */
 	@Override
 	protected void inicializeDays() {
 		addDay(1, new Day_01_2025());
@@ -26,6 +36,7 @@ public class Year_2025 extends Calendar {
 		addDay(6, new Day_06_2025());
 		addDay(7, new Day_07_2025());
 		addDay(8, new Day_08_2025());
+		addDay(9, new Day_09_2025());
 
 	}
 

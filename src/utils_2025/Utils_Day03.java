@@ -5,6 +5,15 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class Utils_Day03 {
+
+    /**
+     * Extracts digits from a string and calculates the maximum product of any two
+     * digits.
+     * Uses brute force to check all combinations of two digits.
+     *
+     * @param line -> the input string containing digits
+     * @return -> the maximum product of any two digits found in the string
+     */
     public static int getMaxJoltage(String line) {
         List<Integer> batteries = new ArrayList<>();
         for (char c : line.toCharArray()) {
@@ -29,7 +38,15 @@ public class Utils_Day03 {
         return maxVoltage;
     }
 
-    // Obtiene el máximo voltaje para K baterías
+    /**
+     * Extracts digits from a string and calculates the product of the K largest
+     * digits.
+     * Uses a max-heap (priority queue) to efficiently select the top K digits.
+     *
+     * @param line -> the input string containing digits
+     * @param K    -> the number of largest digits to multiply
+     * @return -> the product of the K largest digits, or 1 if K=0
+     */
     public static int getMaxJoltage(String line, int K) {
         List<Integer> batteries = new ArrayList<>();
         for (char c : line.toCharArray()) {
@@ -38,7 +55,7 @@ public class Utils_Day03 {
             }
         }
 
-        // Seleccionar las K baterías con mayor voltaje
+        // Select the K batteries with the highest voltage
         PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);
         for (int volt : batteries) {
             pq.offer(volt);
