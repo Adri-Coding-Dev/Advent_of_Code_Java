@@ -175,7 +175,7 @@ Enter day number: 3
 | 05 | [Día 5](src/year_2025/Day_05_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐ | 7ms |
 | 06 | [Día 6](src/year_2025/Day_06_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐ | 50ms |
 | 07 | [Día 7](src/year_2025/Day_07_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐ | 28ms |
-| 08 | [Día 7](src/year_2025/Day_08_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐ | 328ms |
+| 08 | [Día 8](src/year_2025/Day_08_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐ | 328ms |
 | ... | ... | ... | ... | ... | ... |
 
 ### Advent of Code 2024 (Proximamente)
