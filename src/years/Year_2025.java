@@ -8,6 +8,7 @@ import year_2025.Day_04_2025;
 import year_2025.Day_05_2025;
 import year_2025.Day_06_2025;
 import year_2025.Day_07_2025;
+import year_2025.Day_08_2025;
 
 public class Year_2025 extends Calendar {
 
@@ -24,6 +25,7 @@ public class Year_2025 extends Calendar {
 		addDay(5, new Day_05_2025());
 		addDay(6, new Day_06_2025());
 		addDay(7, new Day_07_2025());
+		addDay(8, new Day_08_2025());
 
 	}
 
