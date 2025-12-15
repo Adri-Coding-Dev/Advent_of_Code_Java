@@ -176,9 +176,10 @@ Enter day number: 3
 | 06 | [Día 6](src/year_2025/Day_06_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐ | 50ms |
 | 07 | [Día 7](src/year_2025/Day_07_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐ | 28ms |
 | 08 | [Día 8](src/year_2025/Day_08_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐ | 328ms |
+| 09 | [Día 9](src/year_2025/Day_09_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐⭐ | 68ms |
 | ... | ... | ... | ... | ... | ... |
 
-### Advent of Code 2024 (Proximamente)
+### Advent of Code 2015 (Proximamente)
 
 
 **Leyenda:** ✅ Completado | 🔄 En progreso | ⏳ Pendiente
@@ -247,8 +248,8 @@ Enter day number: 3
 ![Última actualización](https://img.shields.io/badge/Última_actualización-Diciembre_2025-lightgrey)
 
 **Progreso total:** 
-- 🔴 **2025:** 7/24 días (29,17%)
-- 🟡 **Total:** 7/24 días (29,17%)
+- 🔴 **2025:** 9/24 días (37,5%)
+- 🟡 **Total:** 9/24 días (37,5%)
 
 ## 🎯 Cómo Contribuir o Extender
 
