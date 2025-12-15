@@ -177,6 +177,7 @@ Enter day number: 3
 | 07 | [Día 7](src/year_2025/Day_07_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐ | 28ms |
 | 08 | [Día 8](src/year_2025/Day_08_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐ | 328ms |
 | 09 | [Día 9](src/year_2025/Day_09_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐⭐ | 68ms |
+| 10 | [Día 10](src/year_2025/Day_10_2025.java) | ✅ | 🔄 | - | - |
 | ... | ... | ... | ... | ... | ... |
 
 ### Advent of Code 2015 (Proximamente)
