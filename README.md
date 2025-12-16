@@ -245,8 +245,8 @@ Enter day number: 3
 
 ## 📈 Estadísticas del Proyecto
 
-![Años soportados](https://img.shields.io/badge/Años_soportados-2-green)
-![Días implementados](https://img.shields.io/badge/Días_implementados-50+-blue)
+![Años soportados](https://img.shields.io/badge/Años_soportados-10-green)
+![Días implementados](https://img.shields.io/badge/Días_implementados-11-blue)
 ![Última actualización](https://img.shields.io/badge/Última_actualización-Diciembre_2025-lightgrey)
 
 **Progreso total:** 

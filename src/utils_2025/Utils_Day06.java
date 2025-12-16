@@ -11,6 +11,8 @@ import java.util.regex.Pattern;
 
 public class Utils_Day06 {
 
+    public static final char[] solvePart1 = null;
+
     public static BigInteger solvePart1(int year, int day) throws IOException {
         List<String> lines = Utils.readInput(year, day);
         Map<Integer, List<String>> mathMap = new HashMap<>();

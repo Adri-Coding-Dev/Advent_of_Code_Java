@@ -1,6 +1,55 @@
 package utils_2025;
 
+import java.io.IOException;
+import java.util.List;
+
 public class Utils_Day05 {
+
+    public static long solvePart1(int year, int day) throws IOException {
+        List<String> lines = Utils.readInput(year, day);
+
+        int freshCount = 0;
+        for (String line : lines) {
+            if (line.isBlank())
+                continue;
+
+            String[] parts = line.split(":");
+            if (parts.length != 2)
+                continue;
+
+            String id = parts[0];
+            String datesStr = parts[1];
+
+            if (Utils_Day05.isFreshIngredient(id, datesStr)) {
+                freshCount++;
+            }
+        }
+
+        return freshCount;
+    }
+
+    public static long solvePart2(int year, int day) throws IOException {
+        List<String> lines = Utils.readInput(year, day);
+        long totalFreshIds = 0;
+
+        for (String line : lines) {
+            if (line.isBlank())
+                continue;
+
+            String[] parts = line.split(":");
+            if (parts.length != 2)
+                continue;
+
+            String id = parts[0];
+            String datesStr = parts[1];
+
+            if (Utils_Day05.isFreshIngredient(id, datesStr)) {
+                totalFreshIds += Long.parseLong(id);
+            }
+        }
+
+        return totalFreshIds;
+    }
 
     /**
      * Determines if an ingredient is fresh based on a list of dates.

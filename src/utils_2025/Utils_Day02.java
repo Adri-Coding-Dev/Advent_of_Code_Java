@@ -1,10 +1,72 @@
 package utils_2025;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
 public class Utils_Day02 {
+
+    public static long solvePart1(int year, int day) throws IOException {
+        List<String> lines = Utils.readInput(year, day);
+        long totalSum = 0;
+
+        for (String line : lines) {
+            if (line.isBlank()) {
+                continue;
+            }
+
+            String[] ranges = line.split(",");
+            for (String range : ranges) {
+                String[] parts = range.split("-");
+                long L = Long.parseLong(parts[0]);
+                long R = Long.parseLong(parts[1]);
+                totalSum += Utils_Day02.sumInvalidInRange(L, R);
+            }
+        }
+
+        return totalSum;
+    }
+
+    public static long solvePart2(int year, int day) throws IOException {
+        List<String> lines = Utils.readInput(year, day);
+        long total = 0;
+
+        for (String line : lines) {
+            if (line.isBlank()) {
+                continue;
+            }
+
+            String[] rangesStr = line.split(",");
+            List<long[]> ranges = new ArrayList<>();
+            long globalMax = 0;
+            for (String range : rangesStr) {
+                String[] parts = range.split("-");
+                long a = Long.parseLong(parts[0]);
+                long b = Long.parseLong(parts[1]);
+                ranges.add(new long[] { a, b });
+                if (b > globalMax)
+                    globalMax = b;
+            }
+
+            TreeSet<Long> invalidSet = Utils_Day02.generateInvalidNumbers(globalMax);
+            List<Long> invalidList = new ArrayList<>(invalidSet);
+
+            for (long[] range : ranges) {
+                long a = range[0];
+                long b = range[1];
+                int startIdx = Utils_Day02.lowerBound(invalidList, a);
+                for (int i = startIdx; i < invalidList.size(); i++) {
+                    long num = invalidList.get(i);
+                    if (num > b)
+                        break;
+                    total += num;
+                }
+            }
+        }
+        return total;
+    }
 
     /**
      * Calculates the sum of all invalid numbers within the specified inclusive

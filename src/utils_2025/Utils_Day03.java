@@ -1,10 +1,39 @@
 package utils_2025;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.PriorityQueue;
 
 public class Utils_Day03 {
+
+    public static long solvePart1(int year, int day) throws IOException {
+        List<String> lines = Utils.readInput(year, day);
+        long totalSum = 0;
+
+        for (String line : lines) {
+            if (line.isBlank())
+                continue;
+            int maxJoltage = Utils_Day03.getMaxJoltage(line);
+            totalSum += maxJoltage;
+        }
+
+        return totalSum;
+    }
+
+    public static long solvePart2(int year, int day) throws IOException {
+        List<String> lines = Utils.readInput(year, day);
+        long totalSum = 0;
+        final int K = 12;
+
+        for (String line : lines) {
+            if (line.isBlank())
+                continue;
+            totalSum += Utils_Day03.getMaxJoltage(line, K);
+        }
+
+        return totalSum;
+    }
 
     /**
      * Extracts digits from a string and calculates the maximum product of any two
