@@ -113,7 +113,7 @@ AdventOfCode/
 
 1. **Clonar el repositorio:**
 ```bash
-git clone https://github.com/Adri-Coding-Dev/Advent_of_Code_Java?tab=readme-ov-file.git
+git clone https://github.com/Adri-Coding-Dev/Advent_of_Code_Java.git
 ```
 
 2. **Importar en Eclipse:**
