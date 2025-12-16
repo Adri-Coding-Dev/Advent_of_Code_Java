@@ -169,16 +169,17 @@ Enter day number: 3
 | Día | Título | Parte 1 | Parte 2 | Dificultad | Tiempo |
 |-----|--------|:-------:|:-------:|:----------:|:------:|
 | 01 | [Día 1](src/year_2025/Day_01_2025.java) | ✅ | ✅ | ⭐ | 30ms |
-| 02 | [Día 2](src/year_2025/Day_02_2025.java) | ✅ | ✅ | ⭐ | 28ms |
-| 03 | [Día 3](src/year_2025/Day_03_2025.java) | ✅ | ✅ | ⭐⭐ | 7ms |
+| 02 | [Día 2](src/year_2025/Day_02_2025.java) | ✅ | ✅ | ⭐ | 250ms |
+| 03 | [Día 3](src/year_2025/Day_03_2025.java) | ✅ | ✅ | ⭐⭐ | 90ms |
 | 04 | [Día 4](src/year_2025/Day_04_2025.java) | ✅ | ✅ | ⭐⭐⭐ | 26ms |
 | 05 | [Día 5](src/year_2025/Day_05_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐ | 7ms |
 | 06 | [Día 6](src/year_2025/Day_06_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐ | 50ms |
 | 07 | [Día 7](src/year_2025/Day_07_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐ | 28ms |
 | 08 | [Día 8](src/year_2025/Day_08_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐ | 328ms |
 | 09 | [Día 9](src/year_2025/Day_09_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐⭐ | 68ms |
-| 10 | [Día 10](src/year_2025/Day_10_2025.java) | ✅ | 🔄 | - | - |
-| ... | ... | ... | ... | ... | ... |
+| 10 | [Día 10](src/year_2025/Day_10_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐⭐⭐⭐ | 753ms |
+| 11 | [Día 11](src/year_2025/Day_11_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐⭐ | 9ms |
+| 12 | [Día 12](src/year_2025/Day_12_2025.java) | 🔄 | 🔄 | - | - |
 
 ### Advent of Code 2015 (Proximamente)
 
@@ -249,8 +250,16 @@ Enter day number: 3
 ![Última actualización](https://img.shields.io/badge/Última_actualización-Diciembre_2025-lightgrey)
 
 **Progreso total:** 
-- 🔴 **2025:** 9/24 días (37,5%)
-- 🟡 **Total:** 9/24 días (37,5%)
+***Días:***
+
+- 🔴 **2025:** 11/12 (91,87%)
+- 🟡 **Total:** 11/12 (91,87%)
+
+***Partes:***
+
+- 🔴 **2025:** 22/24 (91,87%)
+- 🟡 **Total:** 22/24 (91,87%)
+
 
 ## 🎯 Cómo Contribuir o Extender
 
@@ -302,7 +311,6 @@ import utils.Utils;
 1. Verificar que el archivo existe en `src/inputs_YYYY/`
 2. El nombre debe ser exacto: `Input_Day01.txt`
 3. Refrescar proyecto en Eclipse (F5)
-4. Ejecutar opción 0 en Main.java para verificar estructura
 
 ### Error: Clase no encontrada
 **Solución:**
@@ -323,6 +331,7 @@ import utils.Utils;
 - [Subreddit de Advent of Code](https://www.reddit.com/r/adventofcode/)
 - [Awesome Advent of Code](https://github.com/Bogdanp/awesome-advent-of-code)
 - [Eclipse IDE](https://www.eclipse.org/ide/)
+- [Antigravity (Actual)](https://antigravity.google)
 
 ## 🤝 Contribuciones
 
@@ -372,8 +381,8 @@ Este proyecto comenzó como una simple colección de soluciones y evolucionó ha
 3. **Reutilización** de código entre desafíos
 4. **Organización** para futuros eventos
 
+---
+
 **¡Feliz codificación y felices fiestas!** 🎄🎁
 
 ---
-
-*Este README se actualizará con cada nueva funcionalidad y año agregado.*

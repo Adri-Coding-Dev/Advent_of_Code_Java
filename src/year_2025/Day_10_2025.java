@@ -3,8 +3,11 @@ package year_2025;
 import java.io.IOException;
 import java.util.*;
 import core.Day;
+import utils_2025.Utils_Day10;
 
 public class Day_10_2025 extends Day {
+    private final int year = 2025;
+    private final int day = 10;
 
     public Day_10_2025() {
         super(2025, 10);
@@ -12,26 +15,12 @@ public class Day_10_2025 extends Day {
 
     @Override
     public String solvePart1() throws IOException {
-        List<String> lines = utils_2025.Utils.readInput(year, dayNumber);
-        long totalPresses = 0;
-        for (String line : lines) {
-            if (line.isBlank())
-                continue;
-            totalPresses += solveLights(line);
-        }
-        return String.valueOf(totalPresses);
+        return String.valueOf(Utils_Day10.solvePart1(year, day));
     }
 
     @Override
     public String solvePart2() throws IOException {
-        List<String> lines = utils_2025.Utils.readInput(year, dayNumber);
-        long totalPresses = 0;
-        for (String line : lines) {
-            if (line.isBlank())
-                continue;
-            totalPresses += solveJoltage(line);
-        }
-        return String.valueOf(totalPresses);
+        return String.valueOf(Utils_Day10.solvePart2(year, day));
     }
 
     // ========== PART 1: LIGHTS (XOR) ==========
