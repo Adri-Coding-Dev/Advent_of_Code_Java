@@ -7,6 +7,10 @@
 
 ¡Bienvenido a mi repositorio estructurado para Advent of Code! Este proyecto contiene soluciones organizadas para **múltiples años** (2015-2025) con una arquitectura orientada a objetos limpia, extensible y bien documentada.
 
+## ANTES DE NADA: Agradecimientos.
+
+Gracias a **[@gh0st_2202](https://github.com/gh0st-2202)** por su ayuda y colaboracion durante la resolución de distintos retos del Advent of Code 2025, especialmente en la discusión de enfoques algorítmicos y optimización en Java (La parte mas compleja).
+
 ## ✨ ¿Qué es Advent of Code?
 
 [Advent of Code](https://adventofcode.com) es un calendario de adviento con desafíos de programación creado por Eric Wastl. Cada año, del 1 al 25 de diciembre, se publican nuevos problemas que combinan algoritmia, lógica y creatividad.
@@ -179,7 +183,7 @@ Enter day number: 3
 | 09 | [Día 9](src/year_2025/Day_09_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐⭐ | 68ms |
 | 10 | [Día 10](src/year_2025/Day_10_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐⭐⭐⭐ | 753ms |
 | 11 | [Día 11](src/year_2025/Day_11_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐⭐ | 9ms |
-| 12 | [Día 12](src/year_2025/Day_12_2025.java) | 🔄 | 🔄 | - | - |
+| 12 | [Día 12](src/year_2025/Day_12_2025.java) | ✅ | - | ⭐⭐⭐⭐ | 20ms |
 
 ### Advent of Code 2015 (Proximamente)
 
@@ -252,13 +256,13 @@ Enter day number: 3
 **Progreso total:** 
 ***Días:***
 
-- 🔴 **2025:** 11/12 (91,87%)
-- 🟡 **Total:** 11/12 (91,87%)
+- 🔴 **2025:** 12/12 (100%)
+- 🟡 **Total:** 12/12 (100%)
 
 ***Partes:***
 
-- 🔴 **2025:** 22/24 (91,87%)
-- 🟡 **Total:** 22/24 (91,87%)
+- 🔴 **2025:** 23/23 (100%)
+- 🟡 **Total:** 23/23 (100%)
 
 
 ## 🎯 Cómo Contribuir o Extender
