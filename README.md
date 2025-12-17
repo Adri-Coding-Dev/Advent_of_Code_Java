@@ -396,4 +396,6 @@ Este proyecto comenzó como una simple colección de soluciones y evolucionó ha
 
 **¡Feliz codificación y felices fiestas!** 🎄🎁
 
+PDT: Hay que tener un "porque", para empezar a preguntarse "como" 
+
 ---
