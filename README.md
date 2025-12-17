@@ -51,9 +51,9 @@ AdventOfCode/
 │   │   ├── Day_02_2025.java           # Día 2 de 2025
 │   │   └── ...                        # Resto de Días
 │   │
-│   ├── year_2024/                     # Soluciones 2024
-│   │   ├── Day_01_2024.java           # Día 1 de 2024
-│   │   ├── Day_02_2024.java           # Día 2 de 2024
+│   ├── year_2015/                     # Soluciones 2024
+│   │   ├── Day_01_2015.java           # Día 1 de 2015
+│   │   ├── Day_02_2015.java           # Día 2 de 2015
 │   │   └── ...                        # Resto de Días
 │   │
 │   ├── inputs_2025/                   # Archivos de entrada 2025
@@ -61,7 +61,7 @@ AdventOfCode/
 │   │   ├── Input_Day02.txt            # Input día 2
 │   │   └── ...                        # Resto de Inputs
 │   │
-│   ├── inputs_2024/                   # Archivos de entrada 2024
+│   ├── inputs_2015/                   # Archivos de entrada 2024
 │   │   ├── Input_Day01.txt
 │   │   ├── Input_Day02.txt
 │   │   └── ...
@@ -185,7 +185,11 @@ Enter day number: 3
 | 11 | [Día 11](src/year_2025/Day_11_2025.java) | ✅ | ✅ | ⭐⭐⭐⭐⭐⭐ | 9ms |
 | 12 | [Día 12](src/year_2025/Day_12_2025.java) | ✅ | - | ⭐⭐⭐⭐ | 20ms |
 
-### Advent of Code 2015 (Proximamente)
+### Advent of Code 2015
+
+| Día | Título | Parte 1 | Parte 2 | Dificultad | Tiempo |
+|-----|--------|:-------:|:-------:|:----------:|:------:|
+| 01 | [Día 1](src/year_2015/Day_01_2015.java) | ✅ | ✅ | ⭐ | 17ms |
 
 
 **Leyenda:** ✅ Completado | 🔄 En progreso | ⏳ Pendiente
@@ -253,16 +257,19 @@ Enter day number: 3
 ![Días implementados](https://img.shields.io/badge/Días_implementados-11-blue)
 ![Última actualización](https://img.shields.io/badge/Última_actualización-Diciembre_2025-lightgrey)
 
-**Progreso total:** 
+**Progreso total:**
+
 ***Días:***
 
 - 🔴 **2025:** 12/12 (100%)
-- 🟡 **Total:** 12/12 (100%)
+- 🔴 **2015:** 1/25 (4%)
+- 🟡 **Total:** 13/37 (35,13%)
 
 ***Partes:***
 
 - 🔴 **2025:** 23/23 (100%)
-- 🟡 **Total:** 23/23 (100%)
+- 🔴 **2015:** 2/50 (4%)
+- 🟡 **Total:** 25/73 (34,24%)
 
 
 ## 🎯 Cómo Contribuir o Extender

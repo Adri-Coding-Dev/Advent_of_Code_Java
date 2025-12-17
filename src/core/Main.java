@@ -1,5 +1,6 @@
 package core;
 
+import years.Year_2015;
 import years.Year_2025;
 
 import java.io.IOException;
@@ -49,6 +50,8 @@ public class Main {
 		switch (year) {
 			case 2025:
 				return new Year_2025();
+			case 2015:
+				return new Year_2015();
 			default:
 				throw new IllegalArgumentException("Year " + year + " not supported yet");
 		}
