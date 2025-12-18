@@ -2,7 +2,7 @@
 
 [![Advent of Code](https://img.shields.io/badge/Advent_of_Code-Multi_Year-blueviolet)](https://adventofcode.com)
 [![Java](https://img.shields.io/badge/Java-17+-orange)](https://openjdk.org/)
-[![Eclipse](https://img.shields.io/badge/Built_with-Eclipse-2C2255)](https://eclipse.org)
+[![Antigravity](https://img.shields.io/badge/Built_with-Antigravity-2C2255)](https://antigravity.google)
 [![License](https://img.shields.io/badge/License-MIT-blue)](LICENSE)
 
 ¡Bienvenido a mi repositorio estructurado para Advent of Code! Este proyecto contiene soluciones organizadas para **múltiples años** (2015-2025) con una arquitectura orientada a objetos limpia, extensible y bien documentada.
@@ -186,7 +186,7 @@ Enter day number: 3
 | 01 | [Día 1](src/year_2015/Day_01_2015.java) | ✅ | ✅ | ⭐ | 17ms |
 
 
-**Leyenda:** ✅ Completado | 🔄 En progreso |
+**Leyenda:** ✅ Completado | 🔄 En progreso
 
 ## 🧠 Diseño Orientado a Objetos
 
