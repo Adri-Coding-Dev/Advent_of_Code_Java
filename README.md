@@ -121,11 +121,7 @@ git clone https://github.com/Adri-Coding-Dev/Advent_of_Code_Java.git
    - Seleccionar la carpeta del proyecto
    - Finish
 
-3. **Configurar estructura:**
-   - Ejecutar `CreateProjectStructure.java` si es necesario
-   - Refrescar proyecto (F5)
-
-4. **Agregar tus inputs:**
+3. **Agregar tus inputs:**
    - Copiar tus archivos .txt a `src/inputs_2024/` y `src/inputs_2025/`
    - Los nombres deben seguir el formato `Input_DayXX.txt`
 
@@ -145,10 +141,8 @@ java -cp bin core.Main
 
 ```
 🎄 ADVENT OF CODE RUNNER 🎄
-1. Run day solution       # Ejecuta un día específico
-2. Show instructions      # Muestra las instrucciones
-3. Run entire year        # Ejecuta todos los días de un año
-4. Show instructions and run # Instrucciones + ejecución
+1. Run entire year       # Ejecuta un año específico, con todos sus dias
+2. Run specific day        # Ejecuta un dia especifico
 ```
 
 ### Ejemplos de Uso
@@ -192,7 +186,7 @@ Enter day number: 3
 | 01 | [Día 1](src/year_2015/Day_01_2015.java) | ✅ | ✅ | ⭐ | 17ms |
 
 
-**Leyenda:** ✅ Completado | 🔄 En progreso | ⏳ Pendiente
+**Leyenda:** ✅ Completado | 🔄 En progreso |
 
 ## 🧠 Diseño Orientado a Objetos
 
@@ -254,7 +248,7 @@ Enter day number: 3
 ## 📈 Estadísticas del Proyecto
 
 ![Años soportados](https://img.shields.io/badge/Años_soportados-10-green)
-![Días implementados](https://img.shields.io/badge/Días_implementados-11-blue)
+![Días implementados](https://img.shields.io/badge/Días_implementados-13-blue)
 ![Última actualización](https://img.shields.io/badge/Última_actualización-Diciembre_2025-lightgrey)
 
 **Progreso total:**
@@ -373,7 +367,7 @@ Este proyecto está licenciado bajo la licencia MIT. Consulta el archivo [LICENS
 Si este repositorio te ha sido útil, ¡considera darle una estrella! ⭐
 
 **¿Empezando con Advent of Code?**  
-Revisa las soluciones del año 2024 para entender los patrones comunes.
+Revisa las soluciones de años anteriores para entender los patrones comunes.
 
 **¿Buscando un desafío?**  
 ¡Implementa los días faltantes y envía un PR!
