@@ -23,6 +23,6 @@ public class Day_02_2015 extends Day {
 
     @Override
     public String solvePart2() throws IOException {
-        return "Not implemented yet";
+        return String.valueOf(utils_2015.Utils_Day02.solvePart2(year, day));
     }
 }

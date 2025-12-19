@@ -2,6 +2,7 @@ package utils_2025;
 
 import java.io.IOException;
 import java.util.List;
+import utils.Utils;
 
 /**
  * Public Class to implement the Utils for Day 1 of AoC's 2025

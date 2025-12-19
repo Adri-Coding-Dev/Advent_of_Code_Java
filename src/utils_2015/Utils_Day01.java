@@ -2,6 +2,7 @@ package utils_2015;
 
 import java.io.IOException;
 import java.util.List;
+import utils.Utils;
 
 public class Utils_Day01 {
     public static long solvePart1(int year, int day) throws IOException {

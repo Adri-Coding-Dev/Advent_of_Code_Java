@@ -2,8 +2,7 @@ package year_2025;
 
 import java.io.IOException;
 import java.util.*;
-
-import utils_2025.Utils;
+import utils.Utils;
 import core.Day;
 
 /**
